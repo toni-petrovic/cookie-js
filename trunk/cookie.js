@@ -1,6 +1,6 @@
 /**
  * @author 	Maxime Haineault (max@centdessin.com)
- * @version	0.3
+ * @version	0.4
  * @desc 	JavaScript cookie manipulation class
  * 
  */
