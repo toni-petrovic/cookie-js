@@ -13,8 +13,8 @@ Cookie = {
 	 *  @return void
 	 */
 	get: function(key) {
-		// Still not sure that "[a-zA-Z0-9.()=|%/]+($|;)" match *all* allowed characters in cookies
-		tmp =  document.cookie.match((new RegExp(key +'=[a-zA-Z0-9.()=|%/]+($|;)','g')));
+		// Still not sure that "[a-zA-Z0-9.()=|%/_]+($|;)" match *all* allowed characters in cookies
+		tmp =  document.cookie.match((new RegExp(key +'=[a-zA-Z0-9.()=|%/_]+($|;)','g')));
 		if(!tmp || !tmp[0]) return null;
 		else return unescape(tmp[0].substring(key.length+1,tmp[0].length).replace(';','')) || null;
 		
