@@ -26,7 +26,7 @@ Cookie = {
 	 *  @param string	value	The string to be stored
 	 *  @param integer	ttl		Time To Live (hours)
 	 *  @param string	path	Path in which the cookie is effective, default is "/" (optional)
-	 *  @param string	domain	Domain where the cookie is effective, default is window.location.hostname (optional)
+	 *  @param string	domain	Domain where the cookie is effective, default is window.location.host (optional)
 	 *  @param boolean 	secure	Use SSL or not, default false (optional)
 	 * 
 	 *  @return setted cookie
@@ -34,7 +34,7 @@ Cookie = {
 	set: function(key, value, ttl, path, domain, secure) {
 		cookie = [key+'='+    escape(value),
 		 		  'path='+    ((!path   || path=='')  ? '/' : path),
-		 		  'domain='+  ((!domain || domain=='')?  window.location.hostname : domain)];
+		 		  'domain='+  ((!domain || domain=='')?  window.location.host : domain)];
 		
 		if (ttl)         cookie.push(Cookie.hoursToExpireDate(ttl));
 		if (secure)      cookie.push('secure');
