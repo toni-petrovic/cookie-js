@@ -1,0 +1,1 @@
+Cookie.js is a small JavaScript library to manipulate cookies. No external libraries are needed.
